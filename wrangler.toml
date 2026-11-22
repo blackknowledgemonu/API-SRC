@@ -1,0 +1,21 @@
+name = "num-api-worker"
+main = "src/index.js"
+compatibility_date = "2026-07-28"
+
+workers_dev = true
+
+# ============================================================
+# KV NAMESPACE BINDING
+# ============================================================
+[[kv_namespaces]]
+binding = "API_DATA"
+id = "d65334f76230478eb4976d327ebbf486"
+preview_id = "d65334f76230478eb4976d327ebbf486"
+
+# ============================================================
+# VARS NAMESPACE BINDING
+# ============================================================
+[vars]
+UPSTASH_REDIS_REST_URL="https://well-ocelot-110320.upstash.io"
+UPSTASH_REDIS_REST_TOKEN="gQAAAAAAAa7wAAIgcDJkYWZlYzU2ZjRmYTQ0ZDUyYTk5Y2NjZThjYWRjMjU3Yg"
+TELEGRAM_BOT_TOKEN = "8910963288:AAFpDPuFLFVXbD3-SD19lDxuFKO1fjQ"
