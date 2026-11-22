@@ -1,6 +1,9 @@
 name = "api-src"
 main = "src/index.js"
-compatibility_date = "2026-11-22"
+compatibility_date = "2024-11-01"
+
+# FormData / Blob / fetch native support ke liye (optional but recommended)
+compatibility_flags = ["nodejs_compat"]
 
 workers_dev = true
 
@@ -10,13 +13,17 @@ workers_dev = true
 [[kv_namespaces]]
 binding = "API_DATA"
 id = "363ecd707c1848968577ce3fefeacd4e"
-preview_id = "363ecd707c1848968577ce3fefeacd4e"
+# preview_id alag namespace ka hona chahiye — agar nahi hai to comment out karo
+# preview_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 # ============================================================
-# VARS NAMESPACE BINDING
+# VARS
 # ============================================================
 [vars]
-UPSTASH_REDIS_REST_URL="https://discrete-herring-210769.upstash.io"
-UPSTASH_REDIS_REST_TOKEN="gQAAAAAAAzdRAAIgcDE1NGJiOWM2ZmMzZDA0YzFjYjdmODE0MWIyOTlmZDVhYg"
-
 TELEGRAM_BOT_TOKEN = "9284703153:AAEwITjaBUtcVIb3rsbCVqooDismRYj77A4"
+
+# Optional (agar custom API public URL use karna ho bot messages mein)
+# API_PUBLIC_URL = "https://api-src.alonepatel.workers.dev/api"
+
+# Optional static keys (comma separated)
+# STATIC_KEYS = "KEY1,KEY2"
