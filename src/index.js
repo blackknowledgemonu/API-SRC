@@ -425,7 +425,7 @@ async function sendAsParts(chatId, message, env, parse_mode = 'HTML', reply_mark
 
 // ---------- API LINKS TEXT ----------
 async function getApiLinksText(key, allowedApis, env) {
-  const baseUrl = env.API_PUBLIC_URL || "https://api-src.alonepatel.workers.dev/api";
+  const baseUrl = env.API_PUBLIC_URL || "https://api-src.blackapipr.workers.dev/api";
   let links = "\n\n🔗 <b>YOUR API LINKS:</b>\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n";
   const isAll = allowedApis === '*' || !allowedApis;
   let apis = isAll ? ['num', 'aadhar', 'pan', 'pan_gst', 'gst_basic'] : allowedApis.split(',');
@@ -1290,6 +1290,6 @@ export default {
     if (request.method === 'POST') {
       return handleBot(request, env);
     }
-    return new Response('ALONE PATEL API SERVER — Running ✅', { status: 200 });
+    return new Response('ALONE PATEL API SERVER — Running ✅ API BANANE ME TERI MA KA BOOR FAAT JAYEGA', { status: 200 });
   }
 };
