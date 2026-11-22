@@ -12,4 +12,10 @@ binding = "API_DATA"
 id = "363ecd707c1848968577ce3fefeacd4e"
 preview_id = "363ecd707c1848968577ce3fefeacd4e"
 
+# ============================================================
+# VARS NAMESPACE BINDING
+# ============================================================
+[vars]
+UPSTASH_REDIS_REST_URL="https://well-ocelot-110320.upstash.io"
+UPSTASH_REDIS_REST_TOKEN="gQAAAAAAAa7wAAIgcDJkYWZlYzU2ZjRmYTQ0ZDUyYTk5Y2NjZThjYWRjMjU3Yg"
 TELEGRAM_BOT_TOKEN = "9284703153:AAEwITjaBUtcVIb3rsbCVqooDismRYj77A4"
