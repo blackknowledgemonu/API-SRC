@@ -1,10 +1,10 @@
 // ============================================================
 // @ALONE_PATEL - TG: @ALONE_PATEL
 // email: atulpatel99357@gmail.com
-// FULLY CLEANED BOT WORKER v6.0 — TEXT-ONLY COMMANDS
+// FULLY CLEANED BOT WORKER v6.1 — TEXT-ONLY COMMANDS (KV-ONLY)
 // ============================================================
 
-// ---------- CREDIT ----------
+// ---------- CREDIT (internal only — never leaked in API response) ----------
 const CREDIT = {
   name: "ALONE PATEL",
   developer: "@ALONE_PATEL",
@@ -14,48 +14,50 @@ const CREDIT = {
 
 // ---------- BASE API ENDPOINTS ----------
 const DEFAULT_API_MAP = {
-  gst: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  tgid: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  ff: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  imei: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  ifsc: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  pincode: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  ip: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  tguser: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  paknum: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  pakcnic: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  pan: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  challan: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  instagram: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  pakpolice: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  upiinfo: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  gmailinfo: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
   num: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  aadhar: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  family: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  vehicle: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  v2num: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  leakk: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  song: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  paytm: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  adhaar: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  girlfriend: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  github: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
+  aadhar: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=aadhar',
+  family: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=family',
+  vehicle: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=vehicle-number',
+  v2num: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=v2num',
+  leakk: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=leak-number',
+  numleak: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=leak-number',
+  vehiclepdf: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=vehicle-pdf',
+  vehicle3: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=vehicle-v4',
+  weather: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=weather',
+  bomb: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=bomb',
+  gst: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=gst-direct',
+  tgid: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=tgid',
+  ff: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=ff',
+  imei: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=imei-info',
+  ifsc: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=ifsc',
+  ifsc2: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=ifsc',
+  pincode: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=pincode',
+  ip: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=ip',
+  tguser: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=tguser',
+  paknum: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=paknum',
+  pakcnic: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=pakcnic',
+  pan: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=pan-info',
+  challan: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=challan',
+  vehchallan: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=challan',
+  instagram: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=instagram-profile-full',
+  pakpolice: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=pakpolice',
+  upiinfo: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=upiinfo',
+  gmailinfo: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=leak-email',
+  paytm: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=paytm',
+  paytminfo: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=paytm',
+  adhaar: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=aadhar',
+  aadhartorc: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=aadhar-ration',
+  voterinfo: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=voter-info',
+  song: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=song',
+  girlfriend: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=girlfriend',
+  github: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=github',
   number_adv: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  vehicle_adv: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
+  vehicle_adv: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=vehicle-number',
   numverify: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  pan_gst: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num',
-  gst_basic: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=num'
+  pan_gst: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=gst-direct',
+  gst_basic: 'https://api-src.alonepatel.shop/api?key=@ALONE_PATEL&action=gst-direct'
 };
 
-// ---------- GET API BASE URL ----------
-async function getApiBase(action, env) {
-  const customUrl = await env.API_DATA.get(`apiconfig:${action}`);
-  if (customUrl) return customUrl;
-  return DEFAULT_API_MAP[action] || null;
-}
-
-// ---------- PARAM MAPPING ----------
 const PARAM_MAP = {
   gst: 'gstin', tgid: 'id', ff: 'uid', imei: 'imei', ifsc: 'ifsc',
   pincode: 'code', ip: 'ip', tguser: 'username', paknum: 'pak', pakcnic: 'q',
@@ -65,7 +67,10 @@ const PARAM_MAP = {
   leakk: 'term', song: 'name', paytm: 'info', adhaar: 'aadhar',
   girlfriend: 'msg', github: 'username', number_adv: 'mobile',
   vehicle_adv: 'rc', numverify: 'phone',
-  pan_gst: 'pan', gst_basic: 'gstin'
+  pan_gst: 'pan', gst_basic: 'gstin',
+  numleak: 'term', vehiclepdf: 'rc', vehicle3: 'rc', weather: 'city', bomb: 'number',
+  ifsc2: 'ifsc', vehchallan: 'rc', paytminfo: 'info', aadhartorc: 'aadhar',
+  voterinfo: 'epic'
 };
 
 const API_LIST = Object.keys(DEFAULT_API_MAP);
@@ -73,75 +78,34 @@ const MAX_MESSAGE_LENGTH = 4000;
 const OWNER_ID = 8317235185;
 const COST_PER_CALL = 1;
 const TEST_KEY_EXPIRY_HOURS = 5;
+const DEFAULT_EXPIRY_DAYS = 365;
+const DEFAULT_DAILY_LIMIT = 100;
+const DEFAULT_HOURLY_LIMIT = 20;
+const DEFAULT_MINUTE_LIMIT = 5;
 
 // ============================================================
-// HELPER FUNCTIONS
+// KV HELPERS
 // ============================================================
-
-async function sendLongMessage(chatId, message, env, parse_mode = 'HTML', reply_markup = null) {
-  if (message.length <= MAX_MESSAGE_LENGTH) {
-    await sendTelegram(chatId, message, env, parse_mode, reply_markup);
-    return;
-  }
-  const keyboard = {
-    inline_keyboard: [
-      [{ text: '📄 Send as File', callback_data: `file_pref::file::${Date.now()}` }],
-      [{ text: '📝 Send as Parts', callback_data: `file_pref::parts::${Date.now()}` }]
-    ]
-  };
-  await sendTelegram(chatId,
-    "⚠️ <b>Message is too long!</b>\n\nChoose how to receive:\n• <b>File</b> - Text file with all data\n• <b>Parts</b> - Split into multiple messages",
-    env, 'HTML', JSON.stringify(keyboard)
-  );
-  await setState(chatId, { step: 'long_message_pending', message, parse_mode, reply_markup }, env);
+async function getApiBase(action, env) {
+  if (!env.API_DATA) return DEFAULT_API_MAP[action] || null;
+  const customUrl = await env.API_DATA.get(`apiconfig:${action}`);
+  if (customUrl) return customUrl;
+  return DEFAULT_API_MAP[action] || null;
 }
 
-async function sendAsFile(chatId, content, env, filename = null) {
-  const token = env.TELEGRAM_BOT_TOKEN || '8910963288:AAG-1ZRAyG3fPD4R5mdV8lC_quD6xWn6naM';
-  const url = `https://api.telegram.org/bot${token}/sendDocument`;
-  const chatIdStr = String(chatId);
-  const finalFilename = filename || `${chatIdStr}_data.txt`;
-  const formData = new FormData();
-  const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-  formData.append('document', blob, finalFilename);
-  formData.append('chat_id', chatId);
-  formData.append('caption', `📄 <b>Data exported!</b>\n📁 ${finalFilename}\n📊 ${Math.round(content.length / 1024)} KB`);
-  formData.append('parse_mode', 'HTML');
-  await fetch(url, { method: 'POST', body: formData });
-}
-
-async function sendAsParts(chatId, message, env, parse_mode = 'HTML', reply_markup = null) {
-  const parts = [];
-  let currentPart = '';
-  for (const line of message.split('\n')) {
-    if (currentPart.length + line.length + 1 > MAX_MESSAGE_LENGTH) {
-      parts.push(currentPart); currentPart = '';
-    }
-    currentPart += line + '\n';
-  }
-  if (currentPart) parts.push(currentPart);
-  const totalParts = parts.length;
-  for (let i = 0; i < totalParts; i++) {
-    const partHeader = `📄 Part ${i + 1}/${totalParts}\n━━━━━━━━━━━━━━━━━━━\n\n`;
-    await sendTelegram(chatId, partHeader + parts[i], env, parse_mode, (i === totalParts - 1) ? reply_markup : null);
-  }
-}
-
-// ---------- KV HELPERS ----------
 async function getKeyData(apiKey, env) {
-  if (env.API_DATA) {
-    const val = await env.API_DATA.get(apiKey, 'json');
-    if (val) return val;
-  }
+  if (!env.API_DATA) return null;
+  const val = await env.API_DATA.get(apiKey, 'json');
+  if (val) return val;
   const staticKeys = env.STATIC_KEYS ? env.STATIC_KEYS.split(',') : [];
   if (staticKeys.includes(apiKey)) {
     const expiry = new Date();
-    expiry.setDate(expiry.getDate() + (env.DEFAULT_EXPIRY_DAYS || 365));
+    expiry.setDate(expiry.getDate() + (parseInt(env.DEFAULT_EXPIRY_DAYS) || DEFAULT_EXPIRY_DAYS));
     return {
       user_id: 0,
-      daily_limit: parseInt(env.DEFAULT_DAILY_LIMIT || 100),
-      hourly_limit: parseInt(env.DEFAULT_HOURLY_LIMIT || 20),
-      minute_limit: parseInt(env.DEFAULT_MINUTE_LIMIT || 5),
+      daily_limit: parseInt(env.DEFAULT_DAILY_LIMIT) || DEFAULT_DAILY_LIMIT,
+      hourly_limit: parseInt(env.DEFAULT_HOURLY_LIMIT) || DEFAULT_HOURLY_LIMIT,
+      minute_limit: parseInt(env.DEFAULT_MINUTE_LIMIT) || DEFAULT_MINUTE_LIMIT,
       expiry_date: expiry.toISOString().split('T')[0],
       expiry_time: expiry.toISOString(),
       allowed_apis: '*', status: 'active'
@@ -150,24 +114,20 @@ async function getKeyData(apiKey, env) {
   return null;
 }
 
-async function getAllAdmins(env) {
+async function getAllByRole(role, env) {
+  if (!env.API_DATA) return [];
+  const result = [];
   const list = await env.API_DATA.list({ prefix: 'role:' });
-  const admins = [];
   for (const item of list.keys) {
-    const role = await env.API_DATA.get(item.name);
-    if (role === 'admin') admins.push(item.name.replace('role:', ''));
+    const r = await env.API_DATA.get(item.name);
+    if (r === role) {
+      const cid = item.name.replace('role:', '');
+      const exp = await env.API_DATA.get(`role_expiry:${cid}`);
+      if (exp && new Date(exp) < new Date()) continue;
+      result.push(cid);
+    }
   }
-  return admins;
-}
-
-async function getAllResellers(env) {
-  const list = await env.API_DATA.list({ prefix: 'role:' });
-  const resellers = [];
-  for (const item of list.keys) {
-    const role = await env.API_DATA.get(item.name);
-    if (role === 'reseller') resellers.push(item.name.replace('role:', ''));
-  }
-  return resellers;
+  return result;
 }
 
 async function updateUsage(apiKey, env) {
@@ -191,14 +151,15 @@ async function getUser(chatId, env) {
   if (!user) {
     return {
       chat_id: chatId, username: '', fullname: '', balance: 10,
-      daily_limit: 100, hourly_limit: 20, minute_limit: 5,
+      daily_limit: DEFAULT_DAILY_LIMIT, hourly_limit: DEFAULT_HOURLY_LIMIT,
+      minute_limit: DEFAULT_MINUTE_LIMIT,
       used_today: 0, used_hour: 0, used_minute: 0
     };
   }
   if (user.balance === undefined) user.balance = 10;
-  if (!user.daily_limit) user.daily_limit = 100;
-  if (!user.hourly_limit) user.hourly_limit = 20;
-  if (!user.minute_limit) user.minute_limit = 5;
+  if (!user.daily_limit) user.daily_limit = DEFAULT_DAILY_LIMIT;
+  if (!user.hourly_limit) user.hourly_limit = DEFAULT_HOURLY_LIMIT;
+  if (!user.minute_limit) user.minute_limit = DEFAULT_MINUTE_LIMIT;
   if (user.used_today === undefined) user.used_today = 0;
   if (user.used_hour === undefined) user.used_hour = 0;
   if (user.used_minute === undefined) user.used_minute = 0;
@@ -219,14 +180,35 @@ async function setUserBalance(chatId, amount, env) {
   return user.balance;
 }
 
-async function getRole(chatId, env) { return await env.API_DATA.get(`role:${chatId}`) || null; }
-async function setRole(chatId, role, env) { await env.API_DATA.put(`role:${chatId}`, role); }
-async function removeRole(chatId, env) { await env.API_DATA.delete(`role:${chatId}`); }
-async function isOwner(chatId) { return parseInt(chatId) === OWNER_ID; }
+async function getRole(chatId, env) {
+  if (!env.API_DATA) return null;
+  const exp = await env.API_DATA.get(`role_expiry:${chatId}`);
+  if (exp && new Date(exp) < new Date()) {
+    await env.API_DATA.delete(`role:${chatId}`);
+    await env.API_DATA.delete(`role_expiry:${chatId}`);
+    return null;
+  }
+  return await env.API_DATA.get(`role:${chatId}`) || null;
+}
+
+async function setRole(chatId, role, env) {
+  await env.API_DATA.put(`role:${chatId}`, role);
+}
+
+async function removeRole(chatId, env) {
+  await env.API_DATA.delete(`role:${chatId}`);
+  await env.API_DATA.delete(`role_expiry:${chatId}`);
+}
+
+async function isOwner(chatId) {
+  return parseInt(chatId) === OWNER_ID;
+}
+
 async function isAdmin(chatId, env) {
   if (await isOwner(chatId)) return true;
   return (await getRole(chatId, env)) === 'admin';
 }
+
 async function isReseller(chatId, env) {
   if (await isOwner(chatId)) return true;
   if (await isAdmin(chatId, env)) return true;
@@ -234,15 +216,17 @@ async function isReseller(chatId, env) {
 }
 
 function generateAPIKey() {
-  return 'ALONE_PATEL-' + Array.from(crypto.getRandomValues(new Uint8Array(8))).map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
+  const arr = new Uint8Array(8);
+  crypto.getRandomValues(arr);
+  return 'ALONE_PATEL-' + Array.from(arr).map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
 }
 
 async function createAPIKeyForUser(chatId, daily, hourly, minute, expiryDays, expiryHours, expiryMinutes, allowed, env) {
   const key = generateAPIKey();
   const expiry = new Date();
-  expiry.setDate(expiry.getDate() + expiryDays);
-  expiry.setHours(expiry.getHours() + expiryHours);
-  expiry.setMinutes(expiry.getMinutes() + expiryMinutes);
+  expiry.setDate(expiry.getDate() + (expiryDays || 0));
+  expiry.setHours(expiry.getHours() + (expiryHours || 0));
+  expiry.setMinutes(expiry.getMinutes() + (expiryMinutes || 0));
   const keyData = {
     user_id: chatId, daily_limit: daily, hourly_limit: hourly, minute_limit: minute,
     expiry_date: expiry.toISOString().split('T')[0],
@@ -251,7 +235,7 @@ async function createAPIKeyForUser(chatId, daily, hourly, minute, expiryDays, ex
   };
   await env.API_DATA.put(key, JSON.stringify(keyData));
   const userKeys = await env.API_DATA.get(`userkeys:${chatId}`, 'json') || [];
-  userKeys.push(key);
+  if (!userKeys.includes(key)) userKeys.push(key);
   await env.API_DATA.put(`userkeys:${chatId}`, JSON.stringify(userKeys));
   return key;
 }
@@ -305,9 +289,15 @@ async function setKeyLimits(key, daily, hourly, minute, env) {
   return true;
 }
 
-async function getState(chatId, env) { return await env.API_DATA.get(`state:${chatId}`, 'json') || null; }
-async function setState(chatId, state, env) { await env.API_DATA.put(`state:${chatId}`, JSON.stringify(state), { expirationTtl: 3600 }); }
-async function clearState(chatId, env) { await env.API_DATA.delete(`state:${chatId}`); }
+async function getState(chatId, env) {
+  return await env.API_DATA.get(`state:${chatId}`, 'json') || null;
+}
+async function setState(chatId, state, env) {
+  await env.API_DATA.put(`state:${chatId}`, JSON.stringify(state), { expirationTtl: 3600 });
+}
+async function clearState(chatId, env) {
+  await env.API_DATA.delete(`state:${chatId}`);
+}
 
 async function logAPICall(apiKey, action, paramValue, env) {
   if (!env.API_DATA) return;
@@ -318,7 +308,9 @@ async function logAPICall(apiKey, action, paramValue, env) {
   await env.API_DATA.put(logKey, JSON.stringify(logs), { expirationTtl: 86400 * 7 });
 }
 
-async function getLogs(apiKey, env) { return await env.API_DATA.get(`log:${apiKey}`, 'json') || []; }
+async function getLogs(apiKey, env) {
+  return await env.API_DATA.get(`log:${apiKey}`, 'json') || [];
+}
 
 async function getUserLogs(chatId, env) {
   const keys = await getKeysForUser(chatId, env);
@@ -332,57 +324,116 @@ async function getUserLogs(chatId, env) {
 }
 
 // ---------- TELEGRAM HELPERS ----------
+function tgToken(env) {
+  return env.TELEGRAM_BOT_TOKEN || '8910963288:AAG-1ZRAyG3fPD4R5mdV8lC_quD6xWn6naM';
+}
+
 async function sendTelegram(chatId, message, env, parse_mode = 'HTML', reply_markup = null) {
-  const token = env.TELEGRAM_BOT_TOKEN || '8910963288:AAG-1ZRAyG3fPD4R5mdV8lC_quD6xWn6naM';
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+  const url = `https://api.telegram.org/bot${tgToken(env)}/sendMessage`;
   const payload = { chat_id: chatId, text: message, parse_mode };
   if (reply_markup) payload.reply_markup = reply_markup;
-  await fetch(url, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  });
+  try {
+    await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch (e) { console.error('sendTelegram error:', e); }
 }
 
 async function sendPhoto(chatId, photo, caption, env) {
-  const token = env.TELEGRAM_BOT_TOKEN || '8910963288:AAG-1ZRAyG3fPD4R5mdV8lC_quD6xWn6naM';
-  const url = `https://api.telegram.org/bot${token}/sendPhoto`;
-  await fetch(url, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: chatId, photo, caption })
-  });
+  const url = `https://api.telegram.org/bot${tgToken(env)}/sendPhoto`;
+  try {
+    await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, photo, caption })
+    });
+  } catch (e) { console.error('sendPhoto error:', e); }
 }
 
 async function answerCallback(callbackId, text, env) {
-  const token = env.TELEGRAM_BOT_TOKEN || '8910963288:AAG-1ZRAyG3fPD4R5mdV8lC_quD6xWn6naM';
-  const url = `https://api.telegram.org/bot${token}/answerCallbackQuery`;
-  await fetch(url, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ callback_query_id: callbackId, text })
-  });
+  const url = `https://api.telegram.org/bot${tgToken(env)}/answerCallbackQuery`;
+  try {
+    await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ callback_query_id: callbackId, text })
+    });
+  } catch (e) { console.error('answerCallback error:', e); }
 }
 
 async function editTelegram(chatId, messageId, text, env, parse_mode = 'HTML', reply_markup = null) {
-  const token = env.TELEGRAM_BOT_TOKEN || '8910963288:AAG-1ZRAyG3fPD4R5mdV8lC_quD6xWn6naM';
-  const url = `https://api.telegram.org/bot${token}/editMessageText`;
+  const url = `https://api.telegram.org/bot${tgToken(env)}/editMessageText`;
   const payload = { chat_id: chatId, message_id: messageId, text, parse_mode };
   if (reply_markup) payload.reply_markup = reply_markup;
-  await fetch(url, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  });
+  try {
+    await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch (e) { console.error('editTelegram error:', e); }
 }
 
-// ---------- HELPER: API links ----------
+// ---------- LONG MESSAGE / FILE / PARTS ----------
+async function sendLongMessage(chatId, message, env, parse_mode = 'HTML', reply_markup = null) {
+  if (message.length <= MAX_MESSAGE_LENGTH) {
+    await sendTelegram(chatId, message, env, parse_mode, reply_markup);
+    return;
+  }
+  const keyboard = {
+    inline_keyboard: [
+      [{ text: '📄 Send as File', callback_data: `file_pref::file` }],
+      [{ text: '📝 Send as Parts', callback_data: `file_pref::parts` }]
+    ]
+  };
+  await sendTelegram(chatId,
+    "⚠️ <b>Message is too long!</b>\n\nChoose how to receive:\n• <b>File</b> - Text file with all data\n• <b>Parts</b> - Split into multiple messages",
+    env, 'HTML', JSON.stringify(keyboard)
+  );
+  await setState(chatId, { step: 'long_message_pending', message, parse_mode, reply_markup }, env);
+}
+
+async function sendAsFile(chatId, content, env, filename = null) {
+  const url = `https://api.telegram.org/bot${tgToken(env)}/sendDocument`;
+  const chatIdStr = String(chatId);
+  const finalFilename = filename || `${chatIdStr}_data.txt`;
+  const formData = new FormData();
+  const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+  formData.append('document', blob, finalFilename);
+  formData.append('chat_id', chatId);
+  formData.append('caption', `📄 <b>Data exported!</b>\n📁 ${finalFilename}\n📊 ${Math.round(content.length / 1024)} KB`);
+  formData.append('parse_mode', 'HTML');
+  try {
+    await fetch(url, { method: 'POST', body: formData });
+  } catch (e) { console.error('sendAsFile error:', e); }
+}
+
+async function sendAsParts(chatId, message, env, parse_mode = 'HTML', reply_markup = null) {
+  const parts = [];
+  let currentPart = '';
+  for (const line of message.split('\n')) {
+    if (currentPart.length + line.length + 1 > MAX_MESSAGE_LENGTH) {
+      parts.push(currentPart); currentPart = '';
+    }
+    currentPart += line + '\n';
+  }
+  if (currentPart) parts.push(currentPart);
+  const totalParts = parts.length;
+  for (let i = 0; i < totalParts; i++) {
+    const partHeader = `📄 Part ${i + 1}/${totalParts}\n━━━━━━━━━━━━━━━━━━━\n\n`;
+    await sendTelegram(chatId, partHeader + parts[i], env, parse_mode, (i === totalParts - 1) ? reply_markup : null);
+  }
+}
+
+// ---------- API LINKS TEXT ----------
 async function getApiLinksText(key, allowedApis, env) {
-  const baseUrl = "https://api-src.alonepatel.workers.dev/api";
+  const baseUrl = env.API_PUBLIC_URL || "https://api-src.alonepatel.workers.dev/api";
   let links = "\n\n🔗 <b>YOUR API LINKS:</b>\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n";
-  let apis = allowedApis === '*' ? ['num', 'aadhar', 'pan', 'pan_gst', 'gst_basic'] : allowedApis.split(',');
-  const isAll = allowedApis === '*';
+  const isAll = allowedApis === '*' || !allowedApis;
+  let apis = isAll ? ['num', 'aadhar', 'pan', 'pan_gst', 'gst_basic'] : allowedApis.split(',');
 
   for (const api of apis) {
-    if (api === 'num' || api === '*') {
+    if (api === 'num') {
       links += `📱 <b>NUMBER API:</b>\n<code>${baseUrl}?key=${key}&number=9876543210</code>\n\n`;
-    } else if (api === 'aadhar' || api === 'family' || api === 'adhaar') {
+    } else if (['aadhar', 'family', 'adhaar'].includes(api)) {
       links += `🆔 <b>${api.toUpperCase()} API:</b>\n<code>${baseUrl}?key=${key}&action=${api}&aadhar=[Aadhaar_Redacted]</code>\n\n`;
     } else if (api === 'pan') {
       links += `💳 <b>PAN API:</b>\n<code>${baseUrl}?key=${key}&action=pan&pan=ABCDE1234F</code>\n\n`;
@@ -400,7 +451,7 @@ async function getApiLinksText(key, allowedApis, env) {
         upiinfo: 'q=example@ybl', gmailinfo: 'term=example@gmail.com',
         vehicle: 'number=UP32AB1234', v2num: 'rc=UP32AB1234',
         leakk: 'term=test', song: 'name=sanam%20re', paytm: 'info=9876543210',
-        adhaar: 'adhaar=[Aadhaar_Redacted]', girlfriend: 'msg=hello', github: 'username=octocat',
+        girlfriend: 'msg=hello', github: 'username=octocat',
         number_adv: 'mobile=6204458125', vehicle_adv: 'rc=RJ18CF3690',
         numverify: 'phone=923350071964'
       };
@@ -415,15 +466,17 @@ async function getApiLinksText(key, allowedApis, env) {
   return links;
 }
 
-// ---------- FORMAT PROFILE ----------
+// ---------- PROFILE ----------
 async function formatProfileMessage(chatId, env) {
   const user = await getUser(chatId, env);
   const keys = await getKeysForUser(chatId, env);
   const allKeys = await env.API_DATA.list({ prefix: 'ALONE_PATEL-' });
-  let blockedKeys = [];
+  const blockedKeys = [];
   for (const item of allKeys.keys) {
     const data = await env.API_DATA.get(item.name, 'json');
-    if (data && data.status === 'blocked') blockedKeys.push({ key: item.name, ...data });
+    if (data && data.status === 'blocked' && String(data.user_id) === String(chatId)) {
+      blockedKeys.push({ key: item.name, ...data });
+    }
   }
   const sep = "╠══════════════════════╣";
   let msg = `👤 <b>MY PROFILE</b>\n\n`;
@@ -442,17 +495,21 @@ async function formatProfileMessage(chatId, env) {
       msg += `• <code>${k.key}</code>\n  └ Daily: ${k.daily_limit} (Used: ${usage.daily || 0})\n  └ Expiry: ${expiryStr}\n  └ Status: ${k.status}\n`;
       msg += await getApiLinksText(k.key, k.allowed_apis || '*', env);
     }
-  } else msg += `❌ No API keys yet.\n`;
+  } else {
+    msg += `❌ No API keys yet.\n`;
+  }
   msg += `${sep}\n`;
   if (blockedKeys.length > 0) {
     msg += `🚫 <b>Blocked Keys (${blockedKeys.length}):</b>\n`;
-    for (const bk of blockedKeys) msg += `• <code>${bk.key}</code> (User: ${bk.user_id})\n`;
-  } else msg += `✅ No blocked keys found.\n`;
+    for (const bk of blockedKeys) msg += `• <code>${bk.key}</code>\n`;
+  } else {
+    msg += `✅ No blocked keys found.\n`;
+  }
   msg += `${sep}`;
   return msg;
 }
 
-// ---------- MAIN MENU TEXT ----------
+// ---------- MAIN MENU ----------
 function getMainMenuText(isAdmin = false, isReseller = false, isOwner = false) {
   let msg = "╔═══════════════════════╗\n";
   msg += "║ 🔥 𝐀𝐋𝐎𝐍𝐄 𝐏𝐀𝐓𝐄𝐋 𝐁𝐎𝐓 ║\n";
@@ -496,10 +553,13 @@ function getMainMenuText(isAdmin = false, isReseller = false, isOwner = false) {
 }
 
 // ============================================================
-// BOT HANDLER — TEXT-ONLY
+// BOT HANDLER
 // ============================================================
 async function handleBot(request, env) {
   try {
+    if (!env.API_DATA) {
+      return new Response('KV not configured', { status: 500 });
+    }
     const body = await request.json();
     if (!body.message && !body.callback_query) return new Response('OK', { status: 200 });
 
@@ -511,7 +571,7 @@ async function handleBot(request, env) {
       const chatId = msg.chat.id;
       const fromId = msg.from.id;
       const username = msg.from.username || '';
-      const fullname = (msg.from.first_name || '') + ' ' + (msg.from.last_name || '');
+      const fullname = ((msg.from.first_name || '') + ' ' + (msg.from.last_name || '')).trim();
       const text = msg.text ? msg.text.trim() : '';
 
       const isOwn = await isOwner(fromId);
@@ -519,8 +579,8 @@ async function handleBot(request, env) {
       const isRes = await isReseller(fromId, env);
       const authorized = isOwn || isAdm || isRes;
 
-      let user = await getUser(fromId, env);
-      if (!user.username) {
+      const user = await getUser(fromId, env);
+      if (!user.username && username) {
         user.username = username;
         user.fullname = fullname;
         await env.API_DATA.put(`user:${fromId}`, JSON.stringify(user));
@@ -550,7 +610,7 @@ async function handleBot(request, env) {
           await env.API_DATA.put(`testkey_used:${fromId}`, 'true');
           let t = `🎁 <b>One-Time Test Key Generated!</b>\n\n🔑 <b>Key:</b> <code>${key}</code>\n📅 Daily: 10 | ⏱ Hourly: 5 | ⏳ Minute: 2\n📅 Expiry: ${expiry.toLocaleString()} (5 hours)\n🔧 APIs: All APIs\n\n✅ Use this key to test. After expiry, contact @ALONE_PATEL.`;
           t += await getApiLinksText(key, '*', env);
-          await sendTelegram(chatId, t, env);
+          await sendLongMessage(chatId, t, env);
           return new Response('OK', { status: 200 });
         }
         const notice = `⚠️ <b>Access Denied</b>\n\nYou are not authorized to use this bot.\nPlease contact @ALONE_PATEL to get access.\n\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n💡 Send <code>/testkey</code> to get a one-time free test key.\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n© @ALONE_PATEL - All rights reserved.`;
@@ -568,12 +628,15 @@ async function handleBot(request, env) {
 
       // ---------- COMMANDS ----------
       if (text.startsWith('/')) {
-        const parts = text.split(' ');
-        const cmd = parts[0];
+        const parts = text.split(/\s+/);
+        const cmd = parts[0].toLowerCase();
         const args = parts.slice(1);
 
-        // GENERAL
-        if (cmd === '/help') { await sendLongMessage(chatId, getMainMenuText(isAdm, isRes, isOwn), env); return new Response('OK', { status: 200 }); }
+        // ========== GENERAL ==========
+        if (cmd === '/help') {
+          await sendLongMessage(chatId, getMainMenuText(isAdm, isRes, isOwn), env);
+          return new Response('OK', { status: 200 });
+        }
 
         if (cmd === '/key' || cmd === '/mykeys') {
           const keys = await getKeysForUser(fromId, env);
@@ -609,73 +672,121 @@ async function handleBot(request, env) {
         if (cmd === '/history') {
           try {
             const logs = await getUserLogs(fromId, env);
-            if (logs.length === 0) { await sendTelegram(chatId, "📭 No history found.", env); return new Response('OK', { status: 200 }); }
+            if (logs.length === 0) {
+              await sendTelegram(chatId, "📭 No history found.", env);
+              return new Response('OK', { status: 200 });
+            }
             let t = "<b>📊 Your Recent API Calls</b>\n━━━━━━━━━━━━━━━━━━━\n\n";
             for (const log of logs) {
               t += `🔑 <b>Key:</b> <code>${log.key}</code>\n📌 <b>Action:</b> ${log.action}\n📝 <b>Param:</b> ${log.param}\n🕐 <b>Time:</b> ${new Date(log.time).toLocaleString()}\n━━━━━━━━━━━━━━━━━━━\n`;
             }
             await sendLongMessage(chatId, t, env);
-          } catch (err) { console.error(err); await sendTelegram(chatId, "❌ Error fetching history.", env); }
+          } catch (err) {
+            console.error(err);
+            await sendTelegram(chatId, "❌ Error fetching history.", env);
+          }
           return new Response('OK', { status: 200 });
         }
 
-        // RESELLER
+        // ========== RESELLER ==========
         if (cmd === '/genkey' && isRes) {
-          if (args.length < 4) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/genkey &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt; &lt;expiry_days&gt; [apis]</code>\n\n<b>Example:</b> <code>/genkey 100 20 5 365 gst,pan</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 4) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/genkey &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt; &lt;expiry_days&gt; [apis]</code>\n\n<b>Example:</b> <code>/genkey 100 20 5 365 gst,pan</code>", env);
+            return new Response('OK', { status: 200 });
+          }
+          const daily = parseInt(args[0]), hourly = parseInt(args[1]), minute = parseInt(args[2]), days = parseInt(args[3]);
+          if ([daily, hourly, minute, days].some(n => isNaN(n) || n < 0)) {
+            await sendTelegram(chatId, "❌ Invalid numbers.", env);
+            return new Response('OK', { status: 200 });
+          }
           const allowed = args[4] || '*';
-          const newKey = await createAPIKeyForUser(fromId, parseInt(args[0]), parseInt(args[1]), parseInt(args[2]), parseInt(args[3]), 0, 0, allowed, env);
+          const newKey = await createAPIKeyForUser(fromId, daily, hourly, minute, days, 0, 0, allowed, env);
           const expiryDate = new Date();
-          expiryDate.setDate(expiryDate.getDate() + parseInt(args[3]));
-          let t = `✅ <b>Key Generated!</b>\n\n👤 By: @${username || fullname}\n🔑 <b>Key:</b> <code>${newKey}</code>\n📅 Daily: ${args[0]}\n⏱ Hourly: ${args[1]}\n⏳ Minute: ${args[2]}\n📅 Expiry: ${expiryDate.toLocaleString()}\n🔧 APIs: ${allowed === '*' ? 'All APIs' : allowed}`;
+          expiryDate.setDate(expiryDate.getDate() + days);
+          let t = `✅ <b>Key Generated!</b>\n\n👤 By: @${username || fullname}\n🔑 <b>Key:</b> <code>${newKey}</code>\n📅 Daily: ${daily}\n⏱ Hourly: ${hourly}\n⏳ Minute: ${minute}\n📅 Expiry: ${expiryDate.toLocaleString()}\n🔧 APIs: ${allowed === '*' ? 'All APIs' : allowed}`;
           t += await getApiLinksText(newKey, allowed, env);
           await sendLongMessage(chatId, t, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/addkey' && isRes) {
-          if (args.length < 5) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addkey &lt;key&gt; &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt; &lt;expiry_days&gt; [apis]</code>\n\n<b>Example:</b> <code>/addkey ALONE_PATEL-NEW123 50 20 2 3 ifsc,num</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 5) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addkey &lt;key&gt; &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt; &lt;expiry_days&gt; [apis]</code>\n\n<b>Example:</b> <code>/addkey ALONE_PATEL-NEW123 50 20 2 3 ifsc,num</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const customKey = args[0];
+          const daily = parseInt(args[1]), hourly = parseInt(args[2]), minute = parseInt(args[3]), days = parseInt(args[4]);
+          if ([daily, hourly, minute, days].some(n => isNaN(n) || n < 0)) {
+            await sendTelegram(chatId, "❌ Invalid numbers.", env);
+            return new Response('OK', { status: 200 });
+          }
+          const existing = await env.API_DATA.get(customKey, 'json');
+          if (existing) {
+            await sendTelegram(chatId, "❌ This key already exists.", env);
+            return new Response('OK', { status: 200 });
+          }
           const allowed = args[5] || '*';
           const expiry = new Date();
-          expiry.setDate(expiry.getDate() + parseInt(args[4]));
+          expiry.setDate(expiry.getDate() + days);
           const keyData = {
-            user_id: fromId, daily_limit: parseInt(args[1]), hourly_limit: parseInt(args[2]), minute_limit: parseInt(args[3]),
+            user_id: fromId, daily_limit: daily, hourly_limit: hourly, minute_limit: minute,
             expiry_date: expiry.toISOString().split('T')[0], expiry_time: expiry.toISOString(),
             allowed_apis: allowed, status: 'active'
           };
           await env.API_DATA.put(customKey, JSON.stringify(keyData));
           const userKeys = await env.API_DATA.get(`userkeys:${fromId}`, 'json') || [];
-          userKeys.push(customKey);
+          if (!userKeys.includes(customKey)) userKeys.push(customKey);
           await env.API_DATA.put(`userkeys:${fromId}`, JSON.stringify(userKeys));
-          let t = `✅ <b>Custom Key Added!</b>\n\n👤 By: @${username || fullname}\n🔑 <b>Key:</b> <code>${customKey}</code>\n📅 Daily: ${args[1]}\n⏱ Hourly: ${args[2]}\n⏳ Minute: ${args[3]}\n📅 Expiry: ${expiry.toLocaleString()}\n🔧 APIs: ${allowed === '*' ? 'All APIs' : allowed}`;
+          let t = `✅ <b>Custom Key Added!</b>\n\n👤 By: @${username || fullname}\n🔑 <b>Key:</b> <code>${customKey}</code>\n📅 Daily: ${daily}\n⏱ Hourly: ${hourly}\n⏳ Minute: ${minute}\n📅 Expiry: ${expiry.toLocaleString()}\n🔧 APIs: ${allowed === '*' ? 'All APIs' : allowed}`;
           t += await getApiLinksText(customKey, allowed, env);
           await sendLongMessage(chatId, t, env);
           return new Response('OK', { status: 200 });
         }
 
-        if (cmd === '/blockkey' && (isAdm || isRes || isOwn)) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/blockkey &lt;key&gt;</code>", env); return new Response('OK', { status: 200 }); }
+        if (cmd === '/blockkey' && (isAdm || isRes)) {
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/blockkey &lt;key&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const keyData = await env.API_DATA.get(args[0], 'json');
-          if (!keyData) { await sendTelegram(chatId, `❌ Key not found.`, env); return new Response('OK', { status: 200 }); }
-          if (isRes && !isAdm && !isOwn && keyData.user_id != fromId) { await sendTelegram(chatId, "❌ You can only block your own keys!", env); return new Response('OK', { status: 200 }); }
+          if (!keyData) {
+            await sendTelegram(chatId, `❌ Key not found.`, env);
+            return new Response('OK', { status: 200 });
+          }
+          if (!isAdm && String(keyData.user_id) !== String(fromId)) {
+            await sendTelegram(chatId, "❌ You can only block your own keys!", env);
+            return new Response('OK', { status: 200 });
+          }
           await blockAPIKey(args[0], env);
           await sendTelegram(chatId, `✅ Key <code>${args[0]}</code> blocked.`, env);
           return new Response('OK', { status: 200 });
         }
 
-        if (cmd === '/unblockkey' && (isAdm || isRes || isOwn)) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/unblockkey &lt;key&gt;</code>", env); return new Response('OK', { status: 200 }); }
+        if (cmd === '/unblockkey' && (isAdm || isRes)) {
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/unblockkey &lt;key&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const keyData = await env.API_DATA.get(args[0], 'json');
-          if (!keyData) { await sendTelegram(chatId, `❌ Key not found.`, env); return new Response('OK', { status: 200 }); }
-          if (isRes && !isAdm && !isOwn && keyData.user_id != fromId) { await sendTelegram(chatId, "❌ You can only unblock your own keys!", env); return new Response('OK', { status: 200 }); }
+          if (!keyData) {
+            await sendTelegram(chatId, `❌ Key not found.`, env);
+            return new Response('OK', { status: 200 });
+          }
+          if (!isAdm && String(keyData.user_id) !== String(fromId)) {
+            await sendTelegram(chatId, "❌ You can only unblock your own keys!", env);
+            return new Response('OK', { status: 200 });
+          }
           await unblockAPIKey(args[0], env);
           await sendTelegram(chatId, `✅ Key <code>${args[0]}</code> unblocked.`, env);
           return new Response('OK', { status: 200 });
         }
 
-        // ADMIN
+        // ========== ADMIN ==========
         if (cmd === '/adduser' && isAdm) {
-          if (args.length < 3) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/adduser &lt;chat_id&gt; &lt;username&gt; &lt;fullname&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 3) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/adduser &lt;chat_id&gt; &lt;username&gt; &lt;fullname&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const u = await getUser(args[0], env);
           u.username = args[1];
           u.fullname = args.slice(2).join(' ');
@@ -685,7 +796,10 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/removeuser' && isAdm) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removeuser &lt;chat_id&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removeuser &lt;chat_id&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const u = await getUser(args[0], env);
           await env.API_DATA.delete(`user:${args[0]}`);
           await sendTelegram(chatId, `✅ User ${args[0]} (${u.username || 'No username'}) removed.`, env);
@@ -701,7 +815,7 @@ async function handleBot(request, env) {
               const a = await isAdmin(u.chat_id, env);
               const r = await isReseller(u.chat_id, env);
               let role = "👤 User";
-              if (a && u.chat_id == OWNER_ID) role = "👑 Owner";
+              if (a && String(u.chat_id) === String(OWNER_ID)) role = "👑 Owner";
               else if (a) role = "🛡️ Admin";
               else if (r) role = "💼 Reseller";
               t += `🆔 <b>${u.chat_id}</b>\n👤 ${u.username || 'N/A'}\n📛 ${u.fullname || 'N/A'}\n💰 ${u.balance || 0}\n🔰 ${role}\n━━━━━━━━━━━━━━━━━━━\n`;
@@ -712,24 +826,33 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/userinfo' && isAdm) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/userinfo &lt;chat_id&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/userinfo &lt;chat_id&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const target = args[0];
           const u = await getUser(target, env);
           const keys = await getKeysForUser(target, env);
           const a = await isAdmin(target, env);
           const r = await isReseller(target, env);
           let role = "User";
-          if (a && target == OWNER_ID) role = "Owner";
+          if (a && String(target) === String(OWNER_ID)) role = "Owner";
           else if (a) role = "Admin";
           else if (r) role = "Reseller";
           let t = `<b>📊 User Info: ${target}</b>\n\n👤 ${u.username || 'N/A'}\n📛 ${u.fullname || 'N/A'}\n💰 Balance: ${u.balance || 0}\n🔰 Role: ${role}\n🔑 Keys: ${keys.length}\n`;
-          if (keys.length > 0) { t += `\n<b>Keys:</b>\n`; for (const k of keys) t += `• <code>${k.key}</code> - ${k.status}\n`; }
+          if (keys.length > 0) {
+            t += `\n<b>Keys:</b>\n`;
+            for (const k of keys) t += `• <code>${k.key}</code> - ${k.status}\n`;
+          }
           await sendLongMessage(chatId, t, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/setkeylimit' && isAdm) {
-          if (args.length < 4) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/setkeylimit &lt;key&gt; &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 4) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/setkeylimit &lt;key&gt; &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const ok = await setKeyLimits(args[0], parseInt(args[1]), parseInt(args[2]), parseInt(args[3]), env);
           if (ok) await sendTelegram(chatId, `✅ Limits updated: ${args[1]}/${args[2]}/${args[3]}`, env);
           else await sendTelegram(chatId, `❌ Key not found.`, env);
@@ -737,9 +860,15 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/getkey' && isAdm) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/getkey &lt;key&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/getkey &lt;key&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const data = await env.API_DATA.get(args[0], 'json');
-          if (!data) { await sendTelegram(chatId, `❌ Key not found.`, env); return new Response('OK', { status: 200 }); }
+          if (!data) {
+            await sendTelegram(chatId, `❌ Key not found.`, env);
+            return new Response('OK', { status: 200 });
+          }
           const usage = await env.API_DATA.get(`usage:${args[0]}`, 'json') || { daily: 0 };
           let expiryStr = data.expiry_date || 'Never';
           if (data.expiry_time) expiryStr = new Date(data.expiry_time).toLocaleString();
@@ -767,41 +896,58 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/setbalance' && isAdm) {
-          if (args.length < 2) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/setbalance &lt;chat_id&gt; &lt;amount&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 2) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/setbalance &lt;chat_id&gt; &lt;amount&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           await setUserBalance(args[0], parseInt(args[1]), env);
           await sendTelegram(chatId, `✅ Balance set to ${args[1]} for ${args[0]}.`, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/resetbalance' && isAdm) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/resetbalance &lt;chat_id&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/resetbalance &lt;chat_id&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           await setUserBalance(args[0], 10, env);
           await sendTelegram(chatId, `✅ Balance reset to 10 for ${args[0]}.`, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/addbalance' && isAdm) {
-          if (args.length < 2) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addbalance &lt;chat_id&gt; &lt;amount&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 2) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addbalance &lt;chat_id&gt; &lt;amount&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const nb = await updateUserBalance(args[0], parseInt(args[1]), env);
           await sendTelegram(chatId, `✅ Added ${args[1]}. New: ${nb}`, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/deduct' && isAdm) {
-          if (args.length < 2) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/deduct &lt;chat_id&gt; &lt;amount&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 2) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/deduct &lt;chat_id&gt; &lt;amount&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const nb = await updateUserBalance(args[0], -parseInt(args[1]), env);
           await sendTelegram(chatId, `✅ Deducted ${args[1]}. New: ${nb}`, env);
           return new Response('OK', { status: 200 });
         }
 
-        if (cmd === '/getkeys' && (isOwn || isAdm)) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/getkeys &lt;chat_id or @username&gt;</code>", env); return new Response('OK', { status: 200 }); }
+        if (cmd === '/getkeys' && isAdm) {
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/getkeys &lt;chat_id or @username&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           let target = args[0];
           if (target.startsWith('@')) {
             const list = await env.API_DATA.list({ prefix: 'user:' });
             for (const item of list.keys) {
               const u = await env.API_DATA.get(item.name, 'json');
-              if (u && u.username && u.username.toLowerCase() === target.substring(1).toLowerCase()) { target = u.chat_id; break; }
+              if (u && u.username && u.username.toLowerCase() === target.substring(1).toLowerCase()) {
+                target = u.chat_id; break;
+              }
             }
           }
           const keys = await getKeysForUser(target, env);
@@ -819,7 +965,10 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/deletekey' && isAdm) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/deletekey &lt;key&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/deletekey &lt;key&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const del = await deleteAPIKey(args[0], env);
           if (del) await sendTelegram(chatId, `✅ Key <code>${args[0]}</code> deleted.`, env);
           else await sendTelegram(chatId, `❌ Key not found.`, env);
@@ -827,45 +976,55 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/updateapi' && isAdm) {
-          if (args.length < 2) { await sendTelegram(chatId, `❌ <b>Usage:</b> <code>/updateapi &lt;action&gt; &lt;new_url&gt;</code>\n\nAvailable: ${API_LIST.join(', ')}`, env); return new Response('OK', { status: 200 }); }
+          if (args.length < 2) {
+            await sendTelegram(chatId, `❌ <b>Usage:</b> <code>/updateapi &lt;action&gt; &lt;new_url&gt;</code>\n\nAvailable: ${API_LIST.join(', ')}`, env);
+            return new Response('OK', { status: 200 });
+          }
           const action = args[0];
           const newUrl = args.slice(1).join(' ');
-          if (!DEFAULT_API_MAP[action]) { await sendTelegram(chatId, `❌ Invalid action.\nAvailable: ${API_LIST.join(', ')}`, env); return new Response('OK', { status: 200 }); }
+          if (!DEFAULT_API_MAP[action]) {
+            await sendTelegram(chatId, `❌ Invalid action.\nAvailable: ${API_LIST.join(', ')}`, env);
+            return new Response('OK', { status: 200 });
+          }
           await env.API_DATA.put(`apiconfig:${action}`, newUrl);
           await sendTelegram(chatId, `✅ <b>${action}</b> updated:\n<code>${newUrl}</code>`, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/resetapi' && isAdm) {
-          if (args.length < 1) { await sendTelegram(chatId, `❌ <b>Usage:</b> <code>/resetapi &lt;action&gt;</code>\n\nAvailable: ${API_LIST.join(', ')}`, env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, `❌ <b>Usage:</b> <code>/resetapi &lt;action&gt;</code>\n\nAvailable: ${API_LIST.join(', ')}`, env);
+            return new Response('OK', { status: 200 });
+          }
           const action = args[0];
-          if (!DEFAULT_API_MAP[action]) { await sendTelegram(chatId, `❌ Invalid action.`, env); return new Response('OK', { status: 200 }); }
+          if (!DEFAULT_API_MAP[action]) {
+            await sendTelegram(chatId, `❌ Invalid action.`, env);
+            return new Response('OK', { status: 200 });
+          }
           await env.API_DATA.delete(`apiconfig:${action}`);
           await sendTelegram(chatId, `✅ <b>${action}</b> reset to default.`, env);
           return new Response('OK', { status: 200 });
         }
 
-        if (cmd === '/adminlist' && (isOwn || isAdm)) {
-          const adminList = await env.API_DATA.list({ prefix: 'role:admin' });
-          const resellerList = await env.API_DATA.list({ prefix: 'role:reseller' });
+        if (cmd === '/adminlist' && isAdm) {
+          const adminList = await getAllByRole('admin', env);
+          const resellerList = await getAllByRole('reseller', env);
           let t = "<b>📋 Admin & Reseller List</b>\n━━━━━━━━━━━━━━━━━━━\n\n";
-          if (adminList.keys.length === 0 && resellerList.keys.length === 0) {
+          if (adminList.length === 0 && resellerList.length === 0) {
             t += "No admins or resellers found.";
           } else {
-            if (adminList.keys.length > 0) {
+            if (adminList.length > 0) {
               t += "<b>👑 Admins:</b>\n";
-              for (const item of adminList.keys) {
-                const cid = item.name.replace('role:admin:', '');
+              for (const cid of adminList) {
                 const u = await getUser(cid, env);
                 const keys = await getKeysForUser(cid, env);
                 const exp = await env.API_DATA.get(`role_expiry:${cid}`);
                 t += `🆔 <b>${cid}</b>\n👤 ${u.username || 'N/A'}\n📛 ${u.fullname || 'N/A'}\n🔑 Keys: ${keys.length}\n⏰ Expiry: ${exp ? new Date(exp).toLocaleString() : 'Never'}\n━━━━━━━━━━━━━━━━━━━\n`;
               }
             }
-            if (resellerList.keys.length > 0) {
+            if (resellerList.length > 0) {
               t += "\n<b>🛒 Resellers:</b>\n";
-              for (const item of resellerList.keys) {
-                const cid = item.name.replace('role:reseller:', '');
+              for (const cid of resellerList) {
                 const u = await getUser(cid, env);
                 const keys = await getKeysForUser(cid, env);
                 const exp = await env.API_DATA.get(`role_expiry:${cid}`);
@@ -877,14 +1036,16 @@ async function handleBot(request, env) {
           return new Response('OK', { status: 200 });
         }
 
-        // OWNER
+        // ========== OWNER ==========
         if (cmd === '/addadmin' && isOwn) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addadmin &lt;chat_id&gt; [1d/1m/1y]</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addadmin &lt;chat_id&gt; [1d/1m/1y]</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const target = args[0];
           let days = 0;
           if (args[1]) {
-            const es = args[1];
-            const n = parseInt(es);
+            const es = args[1]; const n = parseInt(es);
             if (es.endsWith('d')) days = n;
             else if (es.endsWith('m')) days = n * 30;
             else if (es.endsWith('y')) days = n * 365;
@@ -903,22 +1064,26 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/removeadmin' && isOwn) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removeadmin &lt;chat_id&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removeadmin &lt;chat_id&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const target = args[0];
           const blocked = await blockAllKeysForUser(target, env);
           await removeRole(target, env);
-          await env.API_DATA.delete(`role_expiry:${target}`);
           await sendTelegram(chatId, `✅ Admin removed: ${target}\n🚫 Keys blocked: ${blocked}`, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/addreseller' && isOwn) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addreseller &lt;chat_id&gt; [1d/1m/1y]</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addreseller &lt;chat_id&gt; [1d/1m/1y]</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const target = args[0];
           let days = 0;
           if (args[1]) {
-            const es = args[1];
-            const n = parseInt(es);
+            const es = args[1]; const n = parseInt(es);
             if (es.endsWith('d')) days = n;
             else if (es.endsWith('m')) days = n * 30;
             else if (es.endsWith('y')) days = n * 365;
@@ -937,11 +1102,13 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/removereseller' && isOwn) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removereseller &lt;chat_id&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removereseller &lt;chat_id&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const target = args[0];
           const blocked = await blockAllKeysForUser(target, env);
           await removeRole(target, env);
-          await env.API_DATA.delete(`role_expiry:${target}`);
           await sendTelegram(chatId, `✅ Reseller removed: ${target}\n🚫 Keys blocked: ${blocked}`, env);
           return new Response('OK', { status: 200 });
         }
@@ -949,14 +1116,17 @@ async function handleBot(request, env) {
         if (cmd === '/stats' && isOwn) {
           const keysCount = (await env.API_DATA.list({ prefix: 'ALONE_PATEL-' })).keys.length;
           const usersCount = (await env.API_DATA.list({ prefix: 'user:' })).keys.length;
-          const admins = (await env.API_DATA.list({ prefix: 'role:admin' })).keys.length;
-          const resellers = (await env.API_DATA.list({ prefix: 'role:reseller' })).keys.length;
+          const admins = (await getAllByRole('admin', env)).length;
+          const resellers = (await getAllByRole('reseller', env)).length;
           await sendTelegram(chatId, `📊 <b>Bot Statistics</b>\n\n🔑 Keys: ${keysCount}\n👥 Users: ${usersCount}\n👑 Admins: ${admins}\n🛒 Resellers: ${resellers}`, env);
           return new Response('OK', { status: 200 });
         }
 
         if (cmd === '/broadcast' && isOwn) {
-          if (args.length === 0) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/broadcast &lt;message&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length === 0) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/broadcast &lt;message&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const bMsg = args.join(' ');
           const users = await env.API_DATA.list({ prefix: 'user:' });
           let count = 0;
@@ -977,7 +1147,7 @@ async function handleBot(request, env) {
               const a = await isAdmin(u.chat_id, env);
               const r = await isReseller(u.chat_id, env);
               let role = "User";
-              if (a && u.chat_id == OWNER_ID) role = "Owner";
+              if (a && String(u.chat_id) === String(OWNER_ID)) role = "Owner";
               else if (a) role = "Admin";
               else if (r) role = "Reseller";
               t += `🆔 ${u.chat_id}\n👤 ${u.username || 'N/A'}\n💰 ${u.balance || 0}\n🔰 ${role}\n\n`;
@@ -988,7 +1158,10 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/removeuserkeys' && isOwn) {
-          if (args.length < 1) { await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removeuserkeys &lt;chat_id&gt;</code>", env); return new Response('OK', { status: 200 }); }
+          if (args.length < 1) {
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/removeuserkeys &lt;chat_id&gt;</code>", env);
+            return new Response('OK', { status: 200 });
+          }
           const blocked = await blockAllKeysForUser(args[0], env);
           await sendTelegram(chatId, `✅ All keys of ${args[0]} blocked (${blocked} keys).`, env);
           return new Response('OK', { status: 200 });
@@ -997,12 +1170,11 @@ async function handleBot(request, env) {
     }
 
     // ============================================================
-    // CALLBACK QUERIES (only file preference + testkey)
+    // CALLBACK QUERIES
     // ============================================================
     if (body.callback_query) {
       const cb = body.callback_query;
       const chatId = cb.message.chat.id;
-      const fromId = cb.from.id;
       const data = cb.data || '';
       const callbackId = cb.id;
 
@@ -1024,12 +1196,6 @@ async function handleBot(request, env) {
         return new Response('OK', { status: 200 });
       }
 
-      // testkey_generate — kept for old messages, but replaced with /testkey
-      if (data === 'testkey_generate') {
-        await answerCallback(callbackId, 'Please send /testkey as a command instead.', env);
-        return new Response('OK', { status: 200 });
-      }
-
       await answerCallback(callbackId, 'No action.', env);
       return new Response('OK', { status: 200 });
     }
@@ -1042,7 +1208,7 @@ async function handleBot(request, env) {
 }
 
 // ============================================================
-// API HANDLER (external API gateway)
+// API HANDLER
 // ============================================================
 async function handleApi(request, env) {
   try {
@@ -1073,31 +1239,38 @@ async function handleApi(request, env) {
     const baseUrl = await getApiBase(action, env);
     if (!baseUrl) return Response.json({ error: 'API not found' }, { status: 404 });
 
-    const param = url.searchParams.get(PARAM_MAP[action]) || url.searchParams.get('q') || '';
-    const finalUrl = `${baseUrl}${baseUrl.includes('?') ? '&' : '?'}${PARAM_MAP[action] || 'q'}=${encodeURIComponent(param)}`;
+    const paramKey = PARAM_MAP[action] || 'q';
+    const param = url.searchParams.get(paramKey) || url.searchParams.get('q') || '';
+    const sep = baseUrl.includes('?') ? '&' : '?';
+    const finalUrl = `${baseUrl}${sep}${paramKey}=${encodeURIComponent(param)}`;
 
     const apiRes = await fetch(finalUrl);
-    const apiData = await apiRes.json();
+    let apiData;
+    try { apiData = await apiRes.json(); }
+    catch { apiData = { raw: await apiRes.text() }; }
 
     await updateUsage(key, env);
     await logAPICall(key, action, param, env);
 
     const sanitized = sanitizeResponse(apiData);
-    return Response.json({ status: true, credit: CREDIT, action, data: sanitized });
+    return Response.json({ status: true, action, data: sanitized });
   } catch (err) {
     return Response.json({ error: err.message }, { status: 500 });
   }
 }
 
-// ---------- SANITIZE ----------
+// ---------- SANITIZE (removes credit / attribution keys) ----------
 function sanitizeResponse(data) {
-  const blacklist = ['credit', 'developer', 'author', 'owner', 'contact', 'footer', 'telegram', 'tg', 'maker', 'created_by'];
+  const blacklistExact = new Set(['credit', 'developer', 'author', 'owner', 'contact', 'footer', 'telegram', 'maker', 'created_by', 'tg', 'channel', 'powered_by']);
+  const blacklistContains = ['credit', 'developer', 'powered', 'alonepatel'];
   if (Array.isArray(data)) return data.map(sanitizeResponse);
   if (data && typeof data === 'object') {
     const newObj = {};
-    for (const [key, value] of Object.entries(data)) {
-      if (blacklist.some(b => key.toLowerCase().includes(b))) continue;
-      newObj[key] = sanitizeResponse(value);
+    for (const [k, v] of Object.entries(data)) {
+      const lk = k.toLowerCase();
+      if (blacklistExact.has(lk)) continue;
+      if (blacklistContains.some(b => lk.includes(b))) continue;
+      newObj[k] = sanitizeResponse(v);
     }
     return newObj;
   }
@@ -1110,8 +1283,13 @@ function sanitizeResponse(data) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    if (url.pathname === '/api') return handleApi(request, env);
-    if (request.method === 'POST') return handleBot(request, env);
-    return new Response('OK', { status: 200 });
+
+    if (url.pathname === '/api' || url.pathname === '/api/') {
+      return handleApi(request, env);
+    }
+    if (request.method === 'POST') {
+      return handleBot(request, env);
+    }
+    return new Response('ALONE PATEL API SERVER — Running ✅', { status: 200 });
   }
 };
