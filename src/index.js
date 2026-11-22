@@ -621,7 +621,7 @@ async function handleBot(request, env) {
       // ---------- START ----------
       if (text === '/start') {
         const welcome = "╔═══════════════════════╗\n║ 🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 — ♧BLACL KNOWLEDGE ║\n╠═══════════════════════╣\n║ 𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐊𝐄𝐘 𝐏𝐀𝐍𝐄𝐋 𝐁𝐎𝐓 \n║ 𝐃𝐌 𝐓𝐎 𝐁𝐔𝐘 :: @Aprichit_190 \n╚═══════════════════════╝\n\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\nCONTACT (DM): @Aprichit_190\n━━━━━━━━━━✦✗✦━━━━━━━━━━━";
-        await sendPhoto(chatId, 'https://iili.io/BMKKREv.jpg', welcome, env);
+        await sendPhoto(chatId, 'https://freeimage.host/i/oKEXKpp', welcome, env);
         await sendLongMessage(chatId, getMainMenuText(isAdm, isRes, isOwn), env);
         return new Response('OK', { status: 200 });
       }
@@ -1290,6 +1290,6 @@ export default {
     if (request.method === 'POST') {
       return handleBot(request, env);
     }
-    return new Response('ALONE PATEL API SERVER — Running ✅ API BANANE ME TERI MA KA BOOR FAAT JAYEGA', { status: 200 });
+    return new Response('BLACK KNOWLEDGE API SERVER — Running ✅ API BANANE ME TERI MA KA BOOR FAAT JAYEGA', { status: 200 });
   }
 };
