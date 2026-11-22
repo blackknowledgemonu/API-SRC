@@ -470,7 +470,7 @@ async function getApiLinksText(key, allowedApis, env) {
 async function formatProfileMessage(chatId, env) {
   const user = await getUser(chatId, env);
   const keys = await getKeysForUser(chatId, env);
-  const allKeys = await env.API_DATA.list({ prefix: 'ALONE_PATEL-' });
+  const allKeys = await env.API_DATA.list({ prefix: 'Aprichit_190-' });
   const blockedKeys = [];
   for (const item of allKeys.keys) {
     const data = await env.API_DATA.get(item.name, 'json');
@@ -711,7 +711,7 @@ async function handleBot(request, env) {
 
         if (cmd === '/addkey' && isRes) {
           if (args.length < 5) {
-            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addkey &lt;key&gt; &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt; &lt;expiry_days&gt; [apis]</code>\n\n<b>Example:</b> <code>/addkey ALONE_PATEL-NEW123 50 20 2 3 ifsc,num</code>", env);
+            await sendTelegram(chatId, "❌ <b>Usage:</b> <code>/addkey &lt;key&gt; &lt;daily&gt; &lt;hourly&gt; &lt;minute&gt; &lt;expiry_days&gt; [apis]</code>\n\n<b>Example:</b> <code>/addkey Aprichit_190-NEW123 50 20 2 3 ifsc,num</code>", env);
             return new Response('OK', { status: 200 });
           }
           const customKey = args[0];
@@ -880,7 +880,7 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/listkeys' && isAdm) {
-          const list = await env.API_DATA.list({ prefix: 'ALONE_PATEL-' });
+          const list = await env.API_DATA.list({ prefix: 'Aprichit_190-' });
           let t = "<b>📜 All Keys:</b>\n━━━━━━━━━━━━━━━━━━━\n\n";
           for (const item of list.keys) {
             const data = await env.API_DATA.get(item.name, 'json');
