@@ -1,5 +1,5 @@
 {
-  "name": "num-api-worker",
+  "name": "api-src",
   "version": "1.0.0",
   "private": true,
   "scripts": {
