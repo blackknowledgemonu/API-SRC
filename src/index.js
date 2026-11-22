@@ -8,7 +8,7 @@
 const CREDIT = {
   name: "BLACK KNOWLEDGE",
   developer: "@Aprichit_190",
-  contact: "https://t.me/ALONE_PATEL",
+  contact: "https://t.me/Aprichit_190",
   footer: "Powered by BLACK KNOWLEDGE"
 };
 
@@ -218,7 +218,7 @@ async function isReseller(chatId, env) {
 function generateAPIKey() {
   const arr = new Uint8Array(8);
   crypto.getRandomValues(arr);
-  return 'ALONE_PATEL-' + Array.from(arr).map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
+  return 'Aprichit_190-' + Array.from(arr).map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
 }
 
 async function createAPIKeyForUser(chatId, daily, hourly, minute, expiryDays, expiryHours, expiryMinutes, allowed, env) {
@@ -1114,7 +1114,7 @@ async function handleBot(request, env) {
         }
 
         if (cmd === '/stats' && isOwn) {
-          const keysCount = (await env.API_DATA.list({ prefix: 'ALONE_PATEL-' })).keys.length;
+          const keysCount = (await env.API_DATA.list({ prefix: 'Aprichit_190-' })).keys.length;
           const usersCount = (await env.API_DATA.list({ prefix: 'user:' })).keys.length;
           const admins = (await getAllByRole('admin', env)).length;
           const resellers = (await getAllByRole('reseller', env)).length;
