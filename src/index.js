@@ -1,15 +1,15 @@
 // ============================================================
-// @ALONE_PATEL - TG: @ALONE_PATEL
-// email: atulpatel99357@gmail.com
+// @Aprichit_190 - TG: @Aprichit_190
+// emai :
 // FULLY CLEANED BOT WORKER v6.1 — TEXT-ONLY COMMANDS (KV-ONLY)
 // ============================================================
 
 // ---------- CREDIT (internal only — never leaked in API response) ----------
 const CREDIT = {
-  name: "ALONE PATEL",
-  developer: "@ALONE_PATEL",
+  name: "BLACK KNOWLEDGE",
+  developer: "@Aprichit_190",
   contact: "https://t.me/ALONE_PATEL",
-  footer: "Powered by ALONE PATEL API SERVER"
+  footer: "Powered by BLACK KNOWLEDGE"
 };
 
 // ---------- BASE API ENDPOINTS ----------
@@ -75,7 +75,7 @@ const PARAM_MAP = {
 
 const API_LIST = Object.keys(DEFAULT_API_MAP);
 const MAX_MESSAGE_LENGTH = 4000;
-const OWNER_ID = 8317235185;
+const OWNER_ID = 8711985917;
 const COST_PER_CALL = 1;
 const TEST_KEY_EXPIRY_HOURS = 5;
 const DEFAULT_EXPIRY_DAYS = 365;
@@ -512,9 +512,9 @@ async function formatProfileMessage(chatId, env) {
 // ---------- MAIN MENU ----------
 function getMainMenuText(isAdmin = false, isReseller = false, isOwner = false) {
   let msg = "╔═══════════════════════╗\n";
-  msg += "║ 🔥 𝐀𝐋𝐎𝐍𝐄 𝐏𝐀𝐓𝐄𝐋 𝐁𝐎𝐓 ║\n";
+  msg += "║ 🔥 BLACK KNOWLEDGE║\n";
   msg += "╠═══════════════════════╣\n";
-  msg += "║ 𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐊𝐄𝐘 𝐏𝐀𝐍𝐄𝐋 \n║ 𝐃𝐌: @ALONE_PATEL \n";
+  msg += "║ 𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐊𝐄𝐘 𝐏𝐀𝐍𝐄𝐋 \n║ 𝐃𝐌: @Aprichit_190 \n";
   msg += "╚═══════════════════════╝\n\n";
   msg += "━━━━━━━━━━✦✗✦━━━━━━━━━━━\n📌 <b>MAIN COMMANDS:</b>\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n";
   msg += "🔑 /key — My API Keys\n💰 /balance — Check Balance\n👤 /profile — Full Profile\n📜 /history — Recent API Calls\n❓ /help — All Commands\n";
@@ -548,7 +548,7 @@ function getMainMenuText(isAdmin = false, isReseller = false, isOwner = false) {
     msg += "🚫 /removeuserkeys &lt;chat_id&gt;\n";
   }
 
-  msg += "\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n💬 <b>Contact:</b> @ALONE_PATEL\n━━━━━━━━━━✦✗✦━━━━━━━━━━━";
+  msg += "\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n💬 <b>Contact:</b> @Aprichit_190\n━━━━━━━━━━✦✗✦━━━━━━━━━━━";
   return msg;
 }
 
@@ -591,7 +591,7 @@ async function handleBot(request, env) {
         if (text === '/testkey') {
           const used = await env.API_DATA.get(`testkey_used:${fromId}`);
           if (used) {
-            await sendTelegram(chatId, "❌ You have already used your one-time test key.\nContact @ALONE_PATEL for permanent access.", env);
+            await sendTelegram(chatId, "❌ You have already used your one-time test key.\nContact @Aprichit_190 for permanent access.", env);
             return new Response('OK', { status: 200 });
           }
           const expiry = new Date();
@@ -608,19 +608,19 @@ async function handleBot(request, env) {
           userKeys.push(key);
           await env.API_DATA.put(`userkeys:${fromId}`, JSON.stringify(userKeys));
           await env.API_DATA.put(`testkey_used:${fromId}`, 'true');
-          let t = `🎁 <b>One-Time Test Key Generated!</b>\n\n🔑 <b>Key:</b> <code>${key}</code>\n📅 Daily: 10 | ⏱ Hourly: 5 | ⏳ Minute: 2\n📅 Expiry: ${expiry.toLocaleString()} (5 hours)\n🔧 APIs: All APIs\n\n✅ Use this key to test. After expiry, contact @ALONE_PATEL.`;
+          let t = `🎁 <b>One-Time Test Key Generated!</b>\n\n🔑 <b>Key:</b> <code>${key}</code>\n📅 Daily: 10 | ⏱ Hourly: 5 | ⏳ Minute: 2\n📅 Expiry: ${expiry.toLocaleString()} (5 hours)\n🔧 APIs: All APIs\n\n✅ Use this key to test. After expiry, contact @Aprichit_190.`;
           t += await getApiLinksText(key, '*', env);
           await sendLongMessage(chatId, t, env);
           return new Response('OK', { status: 200 });
         }
-        const notice = `⚠️ <b>Access Denied</b>\n\nYou are not authorized to use this bot.\nPlease contact @ALONE_PATEL to get access.\n\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n💡 Send <code>/testkey</code> to get a one-time free test key.\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n© @ALONE_PATEL - All rights reserved.`;
+        const notice = `⚠️ <b>Access Denied</b>\n\nYou are not authorized to use this bot.\nPlease contact @Aprichit_190 to get access.\n\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n💡 Send <code>/testkey</code> to get a one-time free test key.\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\n© @Aprichit_190 - All rights reserved.`;
         await sendTelegram(chatId, notice, env);
         return new Response('OK', { status: 200 });
       }
 
       // ---------- START ----------
       if (text === '/start') {
-        const welcome = "╔═══════════════════════╗\n║ 🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 — ♧𝐀𝐋𝐎𝐍𝐄♤𝐏𝐀𝐓𝐄𝐋 ║\n╠═══════════════════════╣\n║ 𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐊𝐄𝐘 𝐏𝐀𝐍𝐄𝐋 𝐁𝐎𝐓 \n║ 𝐃𝐌 𝐓𝐎 𝐁𝐔𝐘 :: @ALONE_PATEL \n╚═══════════════════════╝\n\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\nCONTACT (DM): @ALONE_PATEL\n━━━━━━━━━━✦✗✦━━━━━━━━━━━";
+        const welcome = "╔═══════════════════════╗\n║ 🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 — ♧BLACL KNOWLEDGE ║\n╠═══════════════════════╣\n║ 𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐊𝐄𝐘 𝐏𝐀𝐍𝐄𝐋 𝐁𝐎𝐓 \n║ 𝐃𝐌 𝐓𝐎 𝐁𝐔𝐘 :: @Aprichit_190 \n╚═══════════════════════╝\n\n━━━━━━━━━━✦✗✦━━━━━━━━━━━\nCONTACT (DM): @Aprichit_190\n━━━━━━━━━━✦✗✦━━━━━━━━━━━";
         await sendPhoto(chatId, 'https://iili.io/BMKKREv.jpg', welcome, env);
         await sendLongMessage(chatId, getMainMenuText(isAdm, isRes, isOwn), env);
         return new Response('OK', { status: 200 });
@@ -641,7 +641,7 @@ async function handleBot(request, env) {
         if (cmd === '/key' || cmd === '/mykeys') {
           const keys = await getKeysForUser(fromId, env);
           if (keys.length === 0) {
-            await sendTelegram(chatId, "❌ You have no API keys.\n💡 Use <code>/genkey</code> (resellers+) or contact @ALONE_PATEL.", env);
+            await sendTelegram(chatId, "❌ You have no API keys.\n💡 Use <code>/genkey</code> (resellers+) or contact @Aprichit_190.", env);
             return new Response('OK', { status: 200 });
           }
           let t = "<b>🔑 Your API Keys:</b>\n\n";
